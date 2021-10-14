@@ -54,23 +54,23 @@ void OrdenacionSeleccion(int arr[N],int numero)
     int aux,minimo;
 
 
-    for(i=0;i<numero;i++)
+    for(i=0;i<numero-1;i++)
     {
         minimo=i;
-       for(j=j+1;j<numero;j++)
+       for(j=i+1;j<numero;j++)
         {
-            if(arr[j]<arr[minimo])
+            if(arr[j]<arr[i])
             {
-                minimo=j;
-            }
-        }
          //hay intercambio
-            aux=arr[i];
-            arr[i]=arr[minimo];
-            arr[minimo]=aux;
+            aux=arr[j];
+            arr[j]=arr[i];
+            arr[i]=aux;
 
      }
     }
+
+}
+}
 
 
 void ImprimeArreglo(int arr[N],int numero)
